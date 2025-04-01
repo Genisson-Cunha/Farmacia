@@ -16,7 +16,3 @@ Este é um site para uma farmácia online, onde os usuários podem **pesquisar m
 - **JavaScript (JS)** → Funcionalidades como busca e carrinho
 
 ## 🏗️ Como Rodar o Projeto?
-
-1. Clone o repositório:
-   ```sh
-   git clone https://github.com/seu-usuario/seu-repositorio.git

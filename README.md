@@ -15,4 +15,4 @@ Este é um site para uma farmácia online, onde os usuários podem **pesquisar m
 - **CSS3** → Estilização e efeitos visuais
 - **JavaScript (JS)** → Funcionalidades como busca e carrinho
 
-## 🏗️ Como Rodar o Projeto?
+

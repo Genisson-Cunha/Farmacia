@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <button id="btnTopo" onclick="voltarAoTopo()">⬆</button>
+    <header>
+        <img id="logo" src="imagens/fundo completo.png" alt="">
+        <nav id="menu">
+            <ul>
+                <li><a href="#carrinho">Carrinho de Compras</a></li>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#medicamentos">Medicamentos</a></li>
+                <li><a href="#vitamina">Vitaminas</a></li>
+                <li><a href="#">Contato</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <div id="barra-pesquisa">
+            <label for="search-bar">Pesquisar Medicamentos:</label>
+            <input type="text" id="search-bar" placeholder="Pesquisar medicamentos...">
+            <button onclick="searchMedicine()">Buscar</button>
+        </div>
+    </header>
+    <main>
+        <h1>Bem-vindo à nossa Farmácia!</h1>
+        <p>Oferecemos uma ampla gama de medicamentos e produtos de saúde para atender às suas necessidades.</p>
+        <p>Estamos aqui para ajudar você a cuidar da sua saúde e bem-estar.</p>
+        
+    </main>
+    <section>
+        <h1>Horários de Funcionamento:</h1>
+        <ul>
+            <li>Segunda-feira: 08:00 às 19:00</li>
+            <li>Terça-feira: 08:00 às 19:00</li>
+            <li>Quarta-feira: 08:00 às 19:00</li>
+            <li>Quinta-feira: 08:00 às 19:00</li>
+            <li>Sexta-feira: 08:00 às 19:00</li>
+            <li>Sábado: 08:00 às 12:00</li>
+            <li id="Domingo" >Domingo: Fechado!</li>
+        </ul>
+    </section> 
+
+    <section id="promocoes">
+        <h1>Promoções:</h1>
+        <div class="container-produtos">
+    
+            <div class="product">
+                <a href="produto13.html">
+                    <img src="https://muffatosupermercados.vtexassets.com/arquivos/ids/378465-800-auto?v=638436161712370000&width=800&height=auto&aspect=true" alt="Shampoo Pantene Restauração 350ml + Condicionador 175ml">
+                    <p>Shampoo Pantene Restauração 350ml + Condicionador 175ml</p>
+                    <p style="color:red;">De <s>R$ 37,99</s> por R$ 31,99</p>
+                </a>
+                <button onclick="addToCart('Shampoo Pantene Restauração 350ml + Condicionador 175ml', 31.99)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="product">
+                <a href="produto-kit-shampoo-condicionador-niely-gold.html">
+                    <img src="https://lojaslivia.fbitsstatic.net/img/p/kit-shampoo-275-ml-condicionador-175-ml-niely-gold-liso-pleno-70644/255766.jpg?w=265&h=265&v=no-change&qs=ignore" alt="Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold">
+                    <p>Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold</p>
+                    <p style="color:red;">De <s>R$ 24,99</s> por R$ 19,99</p>
+                </a>
+                <button onclick="addToCart('Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold', 19.99)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="product">
+                <a href="chupeta-beijamin.html">
+                    <img src="https://product-data.raiadrogasil.io/images/4297222.webp" alt="Chupeta Beijamin">
+                    <p>Chupeta Beijamin</p>
+                    <p style="color:red;">De <s>R$ 7,99</s> por R$ 4,99</p>
+                </a>
+                <button onclick="addToCart('Chupeta Beijamin', 4.99)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="product">
+                <a href="mamadeira-mamita-plus-240ml.html">
+                    <img src="https://down-br.img.susercontent.com/file/fe66e59b2e502830051627f6275caf50" alt="Mamadeira Mamita Plus 240ml">
+                    <p>Mamadeira Mamita Plus 240ml</p>
+                    <p style="color:red;">De <s>R$ 15,00</s> por R$ 9,99</p>
+                </a>
+                <button onclick="addToCart('Mamadeira Mamita Plus 240ml', 9.99)">Adicionar ao Carrinho</button>
+            </div>
+    
+        </div>
+    </section>
+
+    <section id="vitamina">
+        <h2>Vitamina</h2>
+        <div class="container-produtos">
+        
+            <div class="product">
+                <a href="suplemento-vitaminico-lavitan-a-z-original.html">
+                    <img src="https://drogariacristal.com/media/catalog/product/cache/dc75f304252411b8c602e1e96d99390d/s/u/suplemento_vitam_nico_lavitan_a-z_original_com_60_comprimidos.jpg" alt="SUPLEMENTO VITAMÍNICO LAVITAN A-Z ORIGINAL COM 60 COMPRIMIDOS">
+                    <p>SUPLEMENTO VITAMÍNICO LAVITAN A-Z ORIGINAL COM 60 COMPRIMIDOS</p>
+                    <p class="price">R$ 24,99</p>
+                </a>
+                <button onclick="addToCart('SUPLEMENTO VITAMÍNICO LAVITAN A-Z ORIGINAL COM 60 COMPRIMIDOS', 24.99)">Adicionar ao Carrinho</button>
+            </div>
+        
+            <div class="product">
+                <a href="lavitan-a-z-mulher-60-comprimidos.html">
+                    <img src="https://www.fisicofarma.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/a/lavitan_0016_100587.png" alt="Lavitan A-Z Mulher 60 Comprimidos">
+                    <p>Lavitan A-Z Mulher 60 Comprimidos</p>
+                    <p class="price">R$ 24,99</p>
+                </a>
+                <button onclick="addToCart('Lavitan A-Z Mulher 60 Comprimidos', 24.99)">Adicionar ao Carrinho</button>
+            </div>
+        
+            <div class="product">
+                <a href="suplemento-vitaminico-infantil-lavitan-patati-patata.html">
+                    <img src="https://drogariasp.vteximg.com.br/arquivos/ids/1136017-1000-1000/Multivitaminico-Infantil-Lavitan-Com-60-Comprimidos-Mastigaveis-Sabor-Tutti-Frutti---733822_0001_64871477c117c40bfce5dfa.png?v=638575339210370000" alt="Suplemento Vitamínico Infantil LAVITAN Patati Patatá Sabor Tutti Frutti com 60 Comprimidos">
+                    <p>Suplemento Vitamínico Infantil LAVITAN Patati Patatá Sabor Tutti Frutti com 60 Comprimidos</p>
+                    <p class="price" style="color: red;">R$ 24,99</p>
+                </a>
+                <button onclick="addToCart('Suplemento Vitamínico Infantil LAVITAN Patati Patatá Sabor Tutti Frutti com 60 Comprimidos', 24.99)">Adicionar ao Carrinho</button>
+            </div>
+
+            <div class="product">
+                <a href="vitaminas-cabelos-e-unhas-lavitan-30-capsulas.html">
+                    <img src="https://m.media-amazon.com/images/S/aplus-media-library-service-media/38695016-fa06-496e-bbef-bedb12f22a99.__CR0,0,2021,1250_PT0_SX970_V1___.png" alt="Vitaminas Cabelos e Unhas, Dourados, Lavitan, 30 cápsulas">
+                    <p>Vitaminas Cabelos e Unhas, Dourados, Lavitan, 30 cápsulas</p>
+                    <p class="price" style="color: red;">R$ 24,99</p>
+                </a>
+                <button onclick="addToCart('Vitaminas Cabelos e Unhas, Dourados, Lavitan, 30 cápsulas', 24.99)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+        
+    </section>
+    
+
+    <section id="medicamentos">
+        <h2>Medicamentos</h2>
+        <div class="container-produtos">
+        
+        <div class="product">
+            <a href="aspirina-adulto-500mg.html">
+                <img src="https://drogariasoares.com.br/BACKOFFICE/Uploads/Produto/Ampliada/518605-28573.jpeg" alt="Aspirina Adulto 500 mg com 10 comprimidos">
+                <p>Aspirina Adulto 500 mg com 10 comprimidos</p>
+                <p><strong style="color: red;">R$ 8,99</strong></p>
+            </a>
+            <button onclick="addToCart('Aspirina Adulto 500 mg com 10 comprimidos', 8.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="anador-500mg-4-comprimidos.html">
+                <img src="https://sinete.com.br/pub/media/catalog/product/a/n/anador_500mg_com_4_comprimidos_-_7891058021740.jpg" alt="Anador 500mg - 4 Comprimidos">
+                <p>Anador 500mg - 4 Comprimidos</p>
+                <p><strong style="color: red;">R$ 5,25</strong></p>
+            </a>
+            <button onclick="addToCart('Anador 500mg - 4 Comprimidos', 5.25)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="benegrip-blister-6-comprimidos.html">
+                <img src="https://drogal.vtexassets.com/arquivos/ids/187395/51344.jpg?v=638387090922500000" alt="Benegrip Blister 6 comprimidos contra gripe e resfriado">
+                <p>Benegrip Blister 6 comprimidos contra gripe e resfriado</p>
+                <p><strong style="color: red;">R$ 13,00</strong></p>
+            </a>
+            <button onclick="addToCart('Benegrip Blister 6 comprimidos contra gripe e resfriado', 13.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="buscopan-20-comprimidos.html">
+                <img src="https://d225afdvrjsxie.cloudfront.net/Custom/Content/Products/45/24/45241_buscopan-com-20-comprimidos_s2_638312545477330888.jpg" alt="Buscopan Com 20 Comprimidos">
+                <p>Buscopan Com 20 Comprimidos</p>
+                <p><strong style="color: red;">R$ 24,00</strong></p>
+            </a>
+            <button onclick="addToCart('Buscopan Com 20 Comprimidos', 22.00)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="buscopan-composto-20-comprimidos.html">
+                <img src="https://farmaciafiquebem.cdn.magazord.com.br/img/2023/02/produto/541/buscopan-composto-com-20-comprimidos-2.jpg?ims=600x600" alt="Buscopan Composto 20 Comprimidos Revestidos">
+                <p>Buscopan Composto 20 Comprimidos Revestidos</p>
+                <p><strong style="color: red;">R$ 28,00</strong></p>
+            </a>
+            <button onclick="addToCart('Buscopan Composto 20 Comprimidos Revestidos', 24.50)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="buscopan-composto-gotas-20ml.html">
+                <img src="https://www.buscopan.com.br/assets/images/buscopan-composto-gotas-mockup.webp" alt="Buscopan Composto 6,67mg/mL Solução Gotas 20ml">
+                <p>Buscopan Composto 6,67mg/mL Solução Gotas 20ml</p>
+                <p><strong style="color: red;">R$ 28,00</strong></p>
+            </a>
+            <button onclick="addToCart('Buscopan Composto 6,67mg/mL Solução Gotas 20ml', 28.00)">Adicionar ao Carrinho</button>
+        </div>
+        
+
+        <div class="product">
+            <a href="ibuprofeno-100mg-20ml.html">
+                <img src="imagens/buprofeno Gotas 100mg com 20ml.jpg" alt="Ibuprofeno Gotas 100mg com 20ml">
+                <p>Ibuprofeno Gotas 100mg com 20ml</p>
+                <p>R$ 14,99</p>
+            </a>
+            <button onclick="addToCart('Ibuprofeno Gotas 100mg com 20ml', 14.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="buprovil-600mg-10-comprimidos.html">
+                <img src="https://uploads.consultaremedios.com.br/product_variation_images/full/9458e6f703eb44cd78c5b8893f771130a9819ce6.jpg?1655327498" alt="Buprovil 600mg 10 Comprimidos">
+                <p>Buprovil 600mg 10 Comprimidos</p>
+                <p>R$ 09,99</p>
+            </a>
+            <button onclick="addToCart('Buprovil 600mg 10 Comprimidos', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="anticoncepcional-ciclo-21.html">
+                <img src="https://www.equipofarma.com.br/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/4/0/408138133080am.png" alt="Anticoncepcional Ciclo 21 C/21 Comp.">
+                <p>Anticoncepcional Ciclo 21 C/21 Comp.</p>
+                <p><strong style="color: red;">R$ 9,99</strong></p>
+            </a>
+            <button onclick="addToCart('Anticoncepcional Ciclo 21 C/21 Comp.', 9.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="produto4.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsoRijS7rmjG9BCge9_IEG1Dp6dapLhWlCAg&s" alt="Dorflex">
+                <p>Dorflex - Cartela com 10 comprimidos</p>
+                <p>R$ 7,50</p>
+            </a>
+            <button onclick="addToCart('Dorflex - Cartela com 10 comprimidos', 7.50)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="produto5.html">
+            <img src="https://drogal.vtexassets.com/arquivos/ids/208994/87878.jpg?v=638542521670200000" alt="Dipirona">
+            <p>Dipirona - Analgésico e antipirético</p>
+            <p>R$ 5,00</p>
+            </a>
+            <button onclick="addToCart('Dipirona - Analgésico e antipirético', 5.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="dipirona-monoidratada-50mg.html">
+                <img src="https://www.geolab.com.br/wp-content/uploads/2021/05/dipirona-Mono-gotas-500mg-20mL-850x1000.png" alt="Dipirona Monoidratada 50mg Solução Oral 100ml">
+                <p>Dipirona Monoidratada 50mg Solução Oral 100ml + Copo Dosador Genérico Geolab</p>
+                <p>R$ 18,50</p>
+            </a>
+            <button onclick="addToCart('Dipirona Monoidratada 50mg Solução Oral 100ml', 18.50)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="dordente-procaína-3ml.html">
+                <img src="https://drogariacatarinense.vteximg.com.br/arquivos/ids/159528-800-800/729421.jpg?v=637275140574070000" alt="Dordente Procaína 3ml">
+                <p>Dordente Procaína 3ml</p>
+                <p><strong style="color: red;">R$ 6,99</strong></p>
+            </a>
+            <button onclick="addToCart('Dordente Procaína 3ml', 6.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+
+        <div class="product">
+            <a href="colirio-teuto-20ml.html">
+                <img src="https://drogal.vtexassets.com/arquivos/ids/208911/87469.png?v=638446555921330000" alt="Colírio Teuto Solução Oftálmica 20ml">
+                <p>Colírio Teuto Solução Oftálmica 20ml</p>
+                <p>R$ 14,99</p>
+            </a>
+            <button onclick="addToCart('Colírio Teuto Solução Oftálmica 20ml', 14.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="doril-500mg-30mg.html">
+                <img src="https://io.convertiez.com.br/m/farmaponte/shop/products/images/21745/large/doril-500mg-30mg-blister-com-6-comprimidos_17701.webp" alt="Doril 500mg + 30mg">
+                <p>Doril 500mg + 30mg</p>
+                <p><strong style="color: red;">R$ 10,90</strong></p>
+            </a>
+            <button onclick="addToCart('Doril 500mg + 30mg', 10.90)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="engov-envelope-6-comprimidos.html">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/547851-1000-1000/27049---engov-envelope-6-comprimidos.jpg?v=637811507230400000" alt="Engov Envelope 6 Comprimidos">
+                <p>Engov Envelope 6 Comprimidos</p>
+                <p><strong style="color: red;">R$ 10,00</strong></p>
+            </a>
+            <button onclick="addToCart('Engov Envelope 6 Comprimidos', 10.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="eno-sabores-efervecente.html">
+                <img src="https://assets.mypharma.com.br/products/de0d1e970043b4bb6c8d679be5e7a69b.jpg" alt="Eno Sabores Efervecente">
+                <p>Eno Sabores Efervecente Tradicional/Limão/Laranja/Abacaxi/Guaraná</p>
+                <p><strong style="color: red;">R$ 4,50 (2 unidades)</strong></p>
+            </a>
+            <button onclick="addToCart('Eno Sabores Efervecente', 4.50)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="eno-100g-tradicional.html">
+                <img src="https://designconceitual.com.br/wp-content/uploads/2016/11/antigas.png" alt="Eno 100G Tradicional / Laranja / Guaraná / Abacaxi / Limão">
+                <p>Eno 100G Tradicional / Laranja / Guaraná / Abacaxi / Limão</p>
+                <p><strong style="color: red;">R$ 27,50</strong></p>
+            </a>
+            <button onclick="addToCart('Eno 100G Tradicional / Laranja / Guaraná / Abacaxi / Limão', 27.50)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="expec-xarope-120ml.html">
+                <img src="https://product-data.raiadrogasil.io/images/7979478.webp" alt="Expec Xarope - 120ml">
+                <p>Expec Xarope - 120ml</p>
+                <p>R$ 34,99</p>
+            </a>
+            <button onclick="addToCart('Expec Xarope - 120ml', 34.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="fosfato-sodico-prednisolona-3mg-ml-60ml.html">
+                <img src="https://d1jgmae0hcnr1i.cloudfront.net/Custom/Content/Products/88/98/88983_prednisolona-3mg-ml-60ml-p62822_m1_638277834246078138.png" alt="Fosfato Sódico de Prednisolona 3mg/ml Solução Oral 60ml">
+                <p>Fosfato Sódico de Prednisolona 3mg/ml Solução Oral 60ml</p>
+                <p>R$ 19,99</p>
+            </a>
+            <button onclick="addToCart('Fosfato Sódico de Prednisolona 3mg/ml Solução Oral 60ml', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+
+        <div class="product">
+            <a href="produto6.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyXwyBE0GeUnDM7Ck25ykGZhg2E74PbvRfTg&s" alt="Glifage XR">
+                <p>Glifage XR (Merck) - Antidiabético</p>
+                <p>R$ 12,00</p>
+            </a>
+            <button onclick="addToCart('Glifage XR (Merck) 500mg', 12.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="histamin-20-comprimidos.html">
+                <img src="https://hyperapharma.vteximg.com.br/arquivos/ids/163271-1000-1000/Histamin-Caixa-20-Comprimidos.jpg?v=638016972994930000" alt="Histamin Caixa 20 Comprimidos">
+                <p>Histamin Caixa 20 Comprimidos</p>
+                <p>R$ 11,99</p>
+            </a>
+            <button onclick="addToCart('Histamin Caixa 20 Comprimidos', 11.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="histamin-xarope-cereja-100ml.html">
+                <img src="https://dmvfarma.vtexassets.com/arquivos/ids/198498-800-auto?v=637795053915130000&width=800&height=auto&aspect=true" alt="Histamin 2mg/5ml - Xarope Antialérgico - Sabor Cereja - 100ml">
+                <p>Histamin 2mg/5ml - Xarope Antialérgico - Sabor Cereja - 100ml</p>
+                <p>R$ 18,50</p>
+            </a>
+            <button onclick="addToCart('Histamin 2mg/5ml - Xarope Antialérgico - Sabor Cereja - 100ml', 18.50)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="produto7.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOldG5-0WVZf4aYIsHBAhKaxL-YqqJDdnTYA&s" alt="Losartana Potássica">
+                <p>Losartana Potássica 50mg CX 3BL X 10 COMP REV</p>
+                <p>R$ 7,00</p>
+            </a>
+            <button onclick="addToCart('Losartana Potássica 50mg CX 3BL X 10 COMP REV', 7.00)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="loratamed-10mg-12-comprimidos.html">
+                <img src="https://io.convertiez.com.br/m/farmaponte/shop/products/images/19726/medium/loratamed-10mg-caixa-com-12-comprimidos_21539.png" alt="Loratamed 10mg, caixa com 12 comprimidos">
+                <p>Loratamed 10mg, caixa com 12 comprimidos</p>
+                <p>R$ 15,00</p>
+            </a>
+            <button onclick="addToCart('Loratamed 10mg, caixa com 12 comprimidos', 15.00)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="loratamed-1mgml-100ml-xarope.html">
+                <img src="https://io.convertiez.com.br/m/farmaponte/shop/products/images/19727/medium/loratamed-1mgml-caixa-com-1-frasco-com-100ml-de-xarope_21538.png" alt="Loratamed 1mg/mL, caixa com 1 frasco com 100mL de xarope">
+                <p>Loratamed 1mg/mL, caixa com 1 frasco com 100mL de xarope</p>
+                <p>R$ 24,99</p>
+            </a>
+            <button onclick="addToCart('Loratamed 1mg/mL, caixa com 1 frasco com 100mL de xarope', 24.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="multigrip-multilab-20-capsulas.html">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/941404-1000-1000/312223---multigrip-20-capsulas-2.jpg?v=638270431466000000" alt="Multigrip Multilab 20 Cápsulas">
+                <p>Multigrip Multilab 20 Cápsulas</p>
+                <p><del>R$ 25,00</del> <strong style="color: red;">R$ 22,99</strong></p>
+            </a>
+            <button onclick="addToCart('Multigrip Multilab 20 Cápsulas', 22.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        
+        <div class="product">
+            <a href="produto8.html">
+                <img src="https://hyperapharma.vteximg.com.br/arquivos/ids/165618-1000-1000/Hypera-Neoquimica-Neosoro-AD-A3-300dpi-RGB-1000px.png?v=638229767897770000" alt="Neosoro">
+                <p>Neosoro Solução Nasal Adulto 30ml</p>
+                <p>R$ 5,99</p>
+            </a>
+            <button onclick="addToCart('Neosoro Solução Nasal Adulto 30ml', 5.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="nimesulida-100mg-12-comprimidos.html">
+                <img src="https://d1jgmae0hcnr1i.cloudfront.net/Custom/Content/Products/91/33/91331_nimesulida-100mg-c-12-cp-p132263_z1_638285770622513878.png" alt="Nimesulida 100mg c/12 comprimidos">
+                <p>Nimesulida 100mg c/12 comprimidos</p>
+                <p>R$ 12,99</p>
+            </a>
+            <button onclick="addToCart('Nimesulida 100mg c/12 comprimidos', 12.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="omenax-20mg-56caps-geolab.html">
+                <img src="https://portal.riomeddistribuicao.com.br/11988-large_default/omenax-20mg-56caps-geolab.webp" alt="Omenax 20mg 56 cápsulas Geolab">
+                <p>Omenax 20mg 56 cápsulas Geolab</p>
+                <p>R$ 19,99</p>
+            </a>
+            <button onclick="addToCart('Omenax 20mg 56 cápsulas Geolab', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="paracetamol-750mg-10-comprimidos.html">
+                <img src="https://paguemenos.vtexassets.com/arquivos/ids/650717-800-auto?v=638008852491870000&width=800&height=auto&aspect=true" alt="Paracetamol 750mg com 10 Comprimidos">
+                <p>Paracetamol 750mg com 10 Comprimidos</p>
+                <p>R$ 5,00</p>
+            </a>
+            <button onclick="addToCart('Paracetamol 750mg com 10 Comprimidos', 5.00)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="torsilax-30-comp.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTszJ5tfrR47-KRP49WN_cnIjbXcN0skPx0xA&s" alt="TORSILAX cx 30 comp.">
+                <p>TORSILAX cx 30 comp.</p>
+                <p><strong style="color: red;">R$ 19,99</strong></p>
+            </a>
+            <button onclick="addToCart('TORSILAX cx 30 comp.', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="ultracler-abacaxi-10ml.html">
+                <img src="https://a-static.mlcdn.com.br/280x210/natucler-flaconete-com-10ml-natulab/drogarianovaesperancaoficial/58602/6958023e071a8040f3502e1a15c9bb67.jpeg" alt="Ultracler Abacaxi 10ml">
+                <p>Ultracler Abacaxi 10ml</p>
+                <p><strong style="color: red;">R$ 1,99</strong></p>
+            </a>
+            <button onclick="addToCart('Ultracler Abacaxi 10ml', 1.99)">Adicionar ao Carrinho</button>
+        </div>
+    </div>
+    </section>
+
+    <section id="pomadas">
+        <h2>Pomadas</h2>
+        <div class="container-produtos">
+        <div class="product">
+            <a href="bacina-pomada-dermatologica-15g.html">
+                <img src="https://phygital-files.mercafacil.com/essencyalfarma/uploads/produto/sulftato_de_neomicina_bacitracina_bacina_pomada_15_g_ref_nebacetin__65d85726-ea70-49d2-91e4-3e27e04c0083.png" alt="Bacina Pomada Dermatológica com 15g">
+                <p>Bacina Pomada Dermatológica com 15g</p>
+                <p><strong style="color: red;">R$ 13,99</strong></p>
+            </a>
+            <button onclick="addToCart('Bacina Pomada Dermatológica com 15g', 14.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="creme-calamed-xo-inseto-30g.html">
+                <img src="https://www.farmaciasnissei.com.br/media/produtos/68809%20(1)_400x400.webp" alt="Creme Calamed Xô Inseto Pós Picada 30g">
+                <p>Creme Calamed Xô Inseto Pós Picada 30g</p>
+                <p><del>R$ 28,00</del> <strong style="color: red;">R$ 17,99</strong></p>
+            </a>
+            <button onclick="addToCart('Creme Calamed Xô Inseto Pós Picada 30g', 17.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="diclofenaco-dietilamonio-gel-60g.html">
+                <img src="https://dmvfarma.vtexassets.com/arquivos/ids/172833/7896714204413_1.jpg?v=637598054281430000" alt="Diclofenaco Dietilamônio 11,6mg/g - Gel - Genérico Neo Química - 60g">
+                <p>Diclofenaco Dietilamônio 11,6mg/g - Gel - Genérico Neo Química - 60g</p>
+                <p><del>R$ 22,00</del> <strong style="color: red;">R$ 18,00</strong></p>
+            </a>
+            <button onclick="addToCart('Diclofenaco Dietilamônio 11,6mg/g - Gel - Genérico Neo Química - 60g', 18.00)">Adicionar ao Carrinho</button>
+        </div>
+        
+        
+        
+        <div class="product">
+            <a href="minancora-pomada-30g.html">
+                <img src="https://p2.trrsf.com/image/fget/cf/1200/900/middle/images.terra.com/2023/10/28/901326801-26152630768173.jpg" alt="Minancora Pomada 30g">
+                <p>Minancora Pomada 30g</p>
+                <p><strong style="color: red;">R$ 18,99</strong></p>
+            </a>
+            <button onclick="addToCart('Minancora Pomada 30g', 18.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="massageol-dermatologica-30g.html">
+                <img src="https://dmvfarma.vtexassets.com/arquivos/ids/245648-800-auto?v=638561467425430000&width=800&height=auto&aspect=true" alt="Massageol Pomada Dermatológica 30g">
+                <p>Massageol 44.4mg/g + 20mg/g + 52.5mg/g Pomada Dermatológica - Bisnaga com 30g</p>
+                <p><strong style="color: red;">R$ 19,99</strong></p>
+            </a>
+            <button onclick="addToCart('Massageol Pomada Dermatológica 30g', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="pomada-massageadora-fisiofort-premium-150g.html">
+                <img src="https://precopopular.vtexassets.com/arquivos/ids/168848-800-899?v=637962645213100000&width=800&height=899&aspect=true" alt="Pomada Massageadora Fisiofort Premium Bio Instinto 150g">
+                <p>Pomada Massageadora Fisiofort Premium Bio Instinto 150g</p>
+                <p><strong style="color: red;">R$ 19,99</strong></p>
+            </a>
+            <button onclick="addToCart('Pomada Massageadora Fisiofort Premium Bio Instinto 150g', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div class="product">
+            <a href="pomada-massageadora-canela-bio-instinto-150g.html">
+                <img src="https://rededor.vtexassets.com/arquivos/ids/404337/image-dac472380fd84e21a744faeb69f69523.jpg?v=638289142526200000" alt="Pomada Massageadora Canela Bio Instinto 150G">
+                <p>Pomada Massageadora Canela Bio Instinto 150G</p>
+                <p><strong style="color: red;">R$ 19,99</strong></p>
+            </a>
+            <button onclick="addToCart('Pomada Massageadora Canela Bio Instinto 150G', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        <div class="product">
+            <a href="super-gel-30-ervas-150g.html">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/667123-1000-1000/image-2cbd5ec51c9d472b9b464af240797f74.jpg?v=637901304433630000" alt="Super Gel 30 Ervas 150g">
+                <p>Super Gel 30 Ervas 150g</p>
+                <p><strong style="color: red;">R$ 19,99</strong></p>
+            </a>
+            <button onclick="addToCart('Super Gel 30 Ervas 150g', 19.99)">Adicionar ao Carrinho</button>
+        </div>
+        
+    
+        <div class="product">
+            <a href="vick-vaporub-pomada.html">
+                <img src="https://product-data.raiadrogasil.io/images/7108976.webp" alt="Vick Vaporub Pomada">
+                <p>Vick Vaporub Pomada</p>
+                <p><strong style="color: red;">R$ 18,99</strong></p>
+            </a>
+            <button onclick="addToCart('Vick Vaporub Pomada', 18.99)">Adicionar ao Carrinho</button>
+        </div>
+        </div>
+    </section>
+
+        <section id="higiene">
+            
+            <h2>Higiene</h2>
+            <div class="container-produtos">
+            <div class="product">
+                <a href="produto10.html">
+                    <img src="https://prezunic.vtexassets.com/arquivos/ids/178727/656788c31ef3739680760dc8.jpg?v=638368808437700000" alt="Creme Dental Colgate Total 12 Clean Mint 90g">
+                    <p>Creme Dental Colgate Total 12 Clean Mint 90g</p>
+                    <p>R$ 9,99</p>
+                </a>
+                <button onclick="addToCart('Creme Dental Colgate Total 12 Clean Mint 90g', 9.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-creme-dental-sorriso-tripla-limpeza.html">
+                    <img src="https://static.clubeextra.com.br/img/uploads/1/549/674549.jpg" alt="Creme Dental Sorriso Tripla Limpeza Completa 70g">
+                    <p>Creme Dental Sorriso Tripla Limpeza Completa 70g</p>
+                    <p>R$ 3,50</p>
+                </a>
+                <button onclick="addToCart('Creme Dental Sorriso Tripla Limpeza Completa 70g', 3.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-creme-dental-close-up-triple-hortela.html">
+                    <img src="https://lojasrede.vtexassets.com/arquivos/ids/343491-1000-auto/null.webp" alt="Creme Dental Close Up Triple Hortelã 70g">
+                    <p>Creme Dental Close Up Triple Hortelã 70g</p>
+                    <p>R$ 2,99</p>
+                </a>
+                <button onclick="addToCart('Creme Dental Close Up Triple Hortelã 70g', 2.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <a href="produto-pasta-dentes-oral-b-anticaries.html">
+                    <img src="https://drogariafarmanutri.com.br/galerias/Y3Zln2r5eprly2r/68aed03c-edc9-4406-9a6e-8bc76490ca0f-rgP8V4y1aKJeQGw5WvzA_lg.jpg" alt="Pasta de dentes Oral-B 1.2.3 Anticáries em creme 70 g">
+                    <p>Pasta de dentes Oral-B 1.2.3 Anticáries em creme 70 g</p>
+                    <p>R$ 3,99</p>
+                </a>
+                <button onclick="addToCart('Pasta de dentes Oral-B 1.2.3 Anticáries em creme 70 g', 3.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-creme-dental-colgate-anticaries.html">
+                    <img src="https://www.extrabom.com.br/uploads/produtos/original/4366_extrabom_higiene-bucal_creme-dental-colgate-maxima-protecao-anticaries-90g_32.jpg" alt="Creme Dental Colgate Máxima Proteção Anticáries 90g">
+                    <p>Creme Dental Colgate Máxima Proteção Anticáries 90g</p>
+                    <p>R$ 5,99</p>
+                </a>
+                <button onclick="addToCart('Creme Dental Colgate Máxima Proteção Anticáries 90g', 5.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="enxaguante-colgate-total-12.html">
+                    <img src="https://bretas.vtexassets.com/arquivos/ids/197965/6571cb00558925a4e889b63e.jpg?v=638375531558200000" alt="Enxaguante Bucal Colgate Total 12 Antibacteriano Zero Álcool Gengiva Reforçada 500ml">
+                    <p>Enxaguante Bucal Colgate Total 12 Antibacteriano Zero Álcool Gengiva Reforçada 500ml</p>
+                    <p><strong style="color: red;">R$ 23,99</strong></p>
+                </a>
+                <button onclick="addToCart('Enxaguante Bucal Colgate Total 12 Antibacteriano Zero Álcool Gengiva Reforçada 500ml', 23.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="enxaguante-oral-b-500ml.html">
+                    <img src="https://www.davo.com.br/ccstore/v1/images/?source=/file/v668497472687395682/products/prod_7506195129104.imagem1.jpg&height=940&width=940" alt="Enxaguante Bucal Oral-B 500ml">
+                    <p>Enxaguante Bucal Oral-B 500ml</p>
+                    <p><strong style="color: red;">R$ 21,99</strong></p>
+                </a>
+                <button onclick="addToCart('Enxaguante Bucal Oral-B 500ml', 21.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="antisseptico-total-action-hortela-500ml.html">
+                    <img src="https://natuphitus.com.br/wp-content/uploads/2021/08/Antisseptico-Total-Action-Hortela-500ml-art-hortela.jpg" alt="Antisséptico Bucal Total Action Hortelã 500ml">
+                    <p>Antisséptico Bucal Total Action Hortelã 500ml</p>
+                    <p><strong style="color: red;">R$ 15,99</strong></p>
+                </a>
+                <button onclick="addToCart('Antisséptico Bucal Total Action Hortelã 500ml', 15.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+            
+            
+    
+            <div class="product">
+                <a href="produto11.html">
+                    <img src="https://drogariamoderna.vtexassets.com/arquivos/ids/252198-800-auto?v=638151236226670000&width=800&height=auto&aspect=true" alt="Desodorante Rexona 150ml">
+                    <p>Desodorante Rexona 150ml</p>
+                    <p><strong style="color: red;">R$ 17,99</strong></p>
+                    <p style="color: red;">Disponível nas variedades: Impacto Controle Prolongado de Suor, Impacto Perfume Marcante, Xtracool Controle Prolongado de Suor, Activedry Controle Prolongado de Suor, Futbol Fanatic Protección que no Para, V8 Controle Prolongado de Suor</p>
+                </a>
+                <button onclick="addToCart('Desodorante Rexona 150ml', 17.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <a href="desodorante-rexona-feminino.html">
+                    <img src="https://down-br.img.susercontent.com/file/1d8a09de5ee192c99766e1cccca76fa4" alt="Desodorante Rexona Feminino">
+                    <p>Desodorante Rexona Feminino</p>
+                    <p><del>R$ 22,90</del> <strong style="color: red;">R$ 17,90</strong></p>
+                    <p style="color: red;">Disponível nas variedades: Power Dry, Bamboo, Erva Doce, Antibacteriante, Cotton Dry!</p>
+                </a>
+                <button onclick="addToCart('Desodorante Rexona Feminino', 17.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="desodorante-dove-roll-on.html">
+                    <img src="https://m.media-amazon.com/images/I/51j5xxgr8aL.jpg" alt="Desodorante Antitranspirante Roll on Dove Original 50ml">
+                    <p>Desodorante Antitranspirante Roll on Dove Original 50ml</p>
+                    <p><strong style="color: red;">R$ 11,90</strong></p>
+                    <p style="color: red;">Disponível nas variedades: Power Dry, Antibacteriante, Original, Invisible</p>
+                </a>
+                <button onclick="addToCart('Desodorante Antitranspirante Roll on Dove Original 50ml', 11.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="desodorante-above-aerosol.html">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_763305-MLB49188933520_022022-O.webp" alt="Desodorante Aerosol Above Feminino e Masculino 150ml">
+                    <p>Desodorante Aerosol Above Feminino e Masculino 150ml</p>
+                    <p><strong style="color: red;">R$ 9,99</strong></p>
+                    <p style="color: red;">Disponível nas variedades: Masculino e Feminino, Light, Vanilla, Lady, Dolce, Invisible, Candy, Ocean</p>
+                </a>
+                <button onclick="addToCart('Desodorante Aerosol Above Feminino e Masculino 150ml', 9.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="desodorante-monange-esporte-feminino.html">
+                    <img src="https://www.monange.com.br/static/linhas/2024-05-07-142300completa_essencial.png" alt="Desodorante Aerossol Antitranspirante Monange Esporte Feminino 150ml">
+                    <p>Desodorante Aerossol Antitranspirante Monange Esporte Feminino 150ml</p>
+                    <p><strong style="color: red;">R$ 13,50</strong></p>
+                    <p style="color: red;">Disponível nas variedades: Flor de Lavanda, Hipoalergênico Sem Perfume, Evita Mancha Nas Roupas Brancas e Pretas (Invisible), Frutas Vermelhas, Esporte Proteção Extra para Dias Corridos</p>
+                </a>
+                <button onclick="addToCart('Desodorante Aerossol Antitranspirante Monange Esporte Feminino 150ml', 13.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="escova-dental-clear-macia-spot.html">
+                    <img src="https://images-americanas.b2w.io/produtos/1737717866/imagens/escova-dental-clear-macia-spot-sortido-leve-3-pague-2/1737717866_1_xlarge.jpg" alt="Escova Dental Clear Macia Spot (sortido) Leve 3 Pague 2">
+                    <p>Escova Dental Clear Macia Spot (sortido) Leve 3 Pague 2</p>
+                    <p>Preço: <span style="color: red;">R$ 7,99</span></p>
+                </a>
+                <button onclick="addToCart('Escova Dental Clear Macia Spot (sortido) Leve 3 Pague 2', 7.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="escova-dental-segma-super-soft.html">
+                    <img src="https://uploads.consultaremedios.com.br/product_variation_images/full/593a21075a6e7ce700b059fac49bc5a49ebb3727.jpg?1612208545" alt="Escova Dental Segma Unidade Super Soft Macia">
+                    <p>Escova Dental Segma Unidade Super Soft Macia</p>
+                    <p>Preço: <span style="color: red;">R$ 9,99</span></p>
+                </a>
+                <button onclick="addToCart('Escova Dental Segma Unidade Super Soft Macia', 9.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="escova-dental-infantil-unicornio.html">
+                    <img src="https://cdn.awsli.com.br/600x700/1327/1327446/produto/133256837/d961981a9c.jpg" alt="Escova Dental Infantil Unicórnio Zein Kids">
+                    <p>Escova Dental Infantil Unicórnio Zein Kids</p>
+                    <p>Preço: <span style="color: red;">R$ 7,00</span></p>
+                </a>
+                <button onclick="addToCart('Escova Dental Infantil Unicórnio Zein Kids', 7.00)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="fio-dental-kess-encerado.html">
+                    <img src="imagens/Fio Dental Kess Encerado Mais Fino 50m.jpeg" alt="Fio Dental Kess Encerado Mais Fino 50m">
+                    <p>Fio Dental Kess Encerado Mais Fino 50m</p>
+                    <p>Preço: <span style="color: red;">R$ 8,99</span></p>
+                </a>
+                <button onclick="addToCart('Fio Dental Kess Encerado Mais Fino 50m', 8.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+    
+            <div class="product">
+                <a href="produto12.html">
+                    <img src="https://m.media-amazon.com/images/I/51g3dQZFoIS._AC_UF1000,1000_QL80_.jpg" alt="Sabonete Líquido Facial Nupill Firmness Intensive 200ml Vitamina C">
+                    <p>Sabonete Líquido Facial Nupill Firmness Intensive 200ml Vitamina C</p>
+                    <p>R$ 26,90</p>
+                </a>
+                <button onclick="addToCart('Sabonete Líquido Facial Nupill Firmness Intensive 200ml Vitamina C', 26.90)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <a href="produto13.html">
+                    <img src="https://muffatosupermercados.vtexassets.com/arquivos/ids/378465-800-auto?v=638436161712370000&width=800&height=auto&aspect=true" alt="Shampoo Pantene Restauração 350ml + Condicionador 175ml">
+                    <p>Shampoo Pantene Restauração 350ml + Condicionador 175ml</p>
+                    <p style="color:red;">De <s>R$ 37,99</s> por R$ 31,99</p>
+                </a>
+                <button onclick="addToCart('Shampoo Pantene Restauração 350ml + Condicionador 175ml', 31.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <a href="produto-kit-seda-niina-secrets.html">
+                    <img src="imagens/produto-kit-seda-niina-secrets imagem fundo branco.webp" alt="Kit Seda By Niina Secrets Colágeno e Vitamina C Shampoo + Condicionador 325ml">
+                    <p>Kit Seda By Niina Secrets Colágeno e Vitamina C Shampoo + Condicionador 325ml</p>
+                    <p>R$ 24,99</p>
+                </a>
+                <button onclick="addToCart('Kit Seda By Niina Secrets Colágeno e Vitamina C Shampoo + Condicionador 325ml', 24.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-kit-shampoo-condicionador-niely-gold.html">
+                    <img src="https://lojaslivia.fbitsstatic.net/img/p/kit-shampoo-275-ml-condicionador-175-ml-niely-gold-liso-pleno-70644/255766.jpg?w=265&h=265&v=no-change&qs=ignore" alt="Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold">
+                    <p>Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold</p>
+                    <p>R$ 19,99</p>
+                </a>
+                <button onclick="addToCart('Kit Shampoo 275 ml + Condicionador 175 ml Niely Gold', 19.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-shampoo-clear-men-ice-cool-menthol.html">
+                    <img src="https://drogariasp.vteximg.com.br/arquivos/ids/1064862-1000-1000/275409---shampoo-clear-ice-cool-menthol-200ml_0003_7891150007406_1.png?v=638454273516100000" alt="Shampoo Anticaspa Clear Men Ice Cool Menthol 200ml">
+                    <p>Shampoo Anticaspa Clear Men Ice Cool Menthol 200ml</p>
+                    <p>R$ 17,90</p>
+                </a>
+                <button onclick="addToCart('Shampoo Anticaspa Clear Men Ice Cool Menthol 200ml', 17.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="sabonete-facial-asepxia-80g.html">
+                    <img src="https://drogariasp.vteximg.com.br/arquivos/ids/1150969-1000-1000/279935---sabonete-asepxia-formula-forte-85g_0002_0.png?v=638611519763470000" alt="Sabonete Facial Em Barra Asepxia Esfoliante Antiacne Com 80g">
+                    <p>Sabonete Facial Em Barra Asepxia Esfoliante Antiacne Com 80g</p>
+                    <p>R$ 13,90</p>
+                </a>
+                <button onclick="addToCart('Sabonete Facial Em Barra Asepxia Esfoliante Antiacne Com 80g', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="sabonete-johnsons-daily-care-lavanda.html">
+                    <img src="https://m.media-amazon.com/images/I/51f0faaTobL._AC_UF1000,1000_QL80_.jpg" alt="Sabonete Johnsons Daily Care Lavanda 80g">
+                    <p>Sabonete Johnsons Daily Care Lavanda 80g</p>
+                    <p>R$ 2,99</p>
+                </a>
+                <button onclick="addToCart('Sabonete Johnsons Daily Care Lavanda 80g', 2.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="sabonete-dove-original.html">
+                    <img src="https://dannycosmeticos.vtexassets.com/arquivos/ids/254207/sabonete-em-barra-dove-original-cremoso-90g-7898422746759-5842.jpg?v=637902993508570000" alt="Sabonete Dove Original 90g">
+                    <p>Sabonete Dove Original 90g</p>
+                    <p>R$ 4,99</p>
+                </a>
+                <button onclick="addToCart('Sabonete Dove Original 90g', 4.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="sabonete-nivea-fragrancia-sortidas.html">
+                    <img src="https://http2.mlstatic.com/D_NQ_NP_826464-MLB69517063635_052023-O.webp" alt="Sabonete Barras Nivea Fragrância Sortidas 85g">
+                    <p>Sabonete Barras Nivea Fragrância Sortidas 85g</p>
+                    <p>R$ 3,50</p>
+                </a>
+                <button onclick="addToCart('Sabonete Barras Nivea Fragrância Sortidas 85g', 3.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="sabonete-lux-barra-85g.html">
+                    <img src="https://drogariasmaisbarato.com.br/wp-content/uploads/2023/03/sabonete-luxbarra85g.webp" alt="Sabonete Lux Barra 85g">
+                    <p>Sabonete Lux Barra 85g</p>
+                    <p>R$ 3,50</p>
+                </a>
+                <button onclick="addToCart('Sabonete Lux Barra 85g', 3.50)">Adicionar ao Carrinho</button>
+            </div>
+            
+            
+    
+            <div class="product">
+                <a href="produto-creme-tratamento-skala.html">
+                    <img src="https://images.tcdn.com.br/img/img_prod/1129429/creme_de_tratamento_skala_1kg_varias_opcoes_2089_1_3f6f3508f5797e7309e0c2295dbac2c8.jpg" alt="Creme de Tratamento Skala 1Kg Varias Opções">
+                    <p>Creme de Tratamento Skala 1Kg Varias Opções</p>
+                    <p>R$ 16,99</p>
+                </a>
+                <button onclick="addToCart('Creme de Tratamento Skala 1Kg Varias Opções', 16.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-creme-tratamento-novex.html">
+                    <img src="https://down-br.img.susercontent.com/file/e7168aa63ca51f18b7ecae941921f278" alt="Cremes De Tratamento Novex 1kg" >
+                    <p>Cremes De Tratamento Novex 1kg</p>
+                    <p>R$ 26,99</p>
+                </a>
+                <button onclick="addToCart('Cremes De Tratamento Novex 1kg', 26.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="manteiga-de-cacau.html">
+                    <img src="https://cdn.awsli.com.br/2500x2500/1570/1570001/produto/59421233/9d107a08b8.jpg" alt="Manteiga de Cacau (2 Blisters de 3,5g cada)">
+                    <p>Manteiga de Cacau (2 Blisters de 3,5g cada)</p>
+                    <p>R$ 2,50</p>
+                </a>
+                <button onclick="addToCart('Manteiga de Cacau (2 Blisters de 3,5g cada)', 2.50)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <a href="produto-locao-deo-hidratante-nivea.html">
+                    <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rd6d-luhy1mdr2wp13a" alt="Loção Deo-Hidratante Corporal Nivea 400ml Fragrâncias" >
+                    <p>  Nivea 400ml Fragrâncias</p>
+                    <p>R$ 26,99</p>
+                </a>
+                <button onclick="addToCart('Loção Deo-Hidratante Corporal Nivea 400ml Fragrâncias', 26.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-creme-hidratante-monange.html">
+                    <img src="https://images-americanas.b2w.io/produtos/4076856665/imagens/creme-hidratante-corporal-monange-200ml/4076856665_1_large.jpg" alt="Creme Hidratante Corporal Monange 200Ml">
+                    <p>Creme Hidratante Corporal Monange 200Ml</p>
+                    <p>R$ 14,99</p>
+                </a>
+                <button onclick="addToCart('Creme Hidratante Corporal Monange 200Ml', 14.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+    
+            
+        </section>
+        <hr>
+        
+        <section id="beleza">
+            
+            <h2>Belezas</h2>
+            <div class="container-produtos">    
+            <div class="product">
+                <a href="bozzano-gel-fixador-300g.html">
+                    <img src="https://junto.com.br/wp-content/uploads/2017/06/Bozzano_1.jpg" alt="Bozzano Gel Fixador 300G Efeito Molhado">
+                    <p>Bozzano Gel Fixador 300G Efeito Molhado - HIGIENE E CUIDADOS PESSOAIS</p>
+                    <p><strong style="color: red;">R$ 17,99</strong></p>
+                </a>
+                <button onclick="addToCart('Bozzano Gel Fixador 300G Efeito Molhado', 17.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+    
+            <div class="product">
+                <a href="produto9.html">
+                    <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lkquaoobc91yb3" alt="Body Splash Giovanna Baby">
+                    <p>Body Splash Giovanna Baby 260ml</p>
+                    <p>R$ 31,90</p>
+                </a>
+                <button onclick="addToCart('Body Splash Giovanna Baby 260ml', 31.90)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="product">
+                <a href="produto-baseliquida-fenzza.html">
+                    <img src="https://images.tcdn.com.br/img/img_prod/1242367/base_liquida_efeito_matte_bege_claro_fenzza_531_2_b046ea41eb5466d7292e1addc2f668ff.jpg" alt="Base Líquida Matte Cobertura Média Fenzza">
+                    <p>Base Líquida Matte Cobertura Média Fenzza</p>
+                    <p>R$ 19,50</p>
+                </a>
+                <button onclick="addToCart('Base Líquida Matte Cobertura Média Fenzza', 19.50)">Adicionar ao Carrinho</button>
+            </div>
+    
+            <div class="product">
+                <a href="batom-infantil-princesas-disney.html">
+                    <img src="https://acdn.mitiendanube.com/stores/004/179/057/products/batom-princesas-1a5e99d04e504b5d1517056863774667-1024-1024.jpg" alt="Batom Infantil Princesas da Disney">
+                    <p>Batom Infantil Princesas da Disney</p>
+                    <p>R$ 4,99</p>
+                </a>
+                <button onclick="addToCart('Batom Infantil Princesas da Disney', 4.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="gel-fixador-yama-300g.html">
+                    <img src="https://images.tcdn.com.br/img/img_prod/1107125/gel_fixador_yama_fixacao_extra_forte_fix_aco_4_300g_4941_1_fda164e360faa65a0ee793d9943e5b7c.png" alt="Gel Fixador Yama Fixação Extra Forte Fix Aço 4 300g">
+                    <p>Gel Fixador Yama Fixação Extra Forte Fix Aço 4 300g</p>
+                    <p><strong style="color: red;">R$ 19,99</strong></p>
+                </a>
+                <button onclick="addToCart('Gel Fixador Yama Fixação Extra Forte Fix Aço 4 300g', 19.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+        <a href="gel-fixador-above-men-300g.html">
+            <img src="https://down-br.img.susercontent.com/file/br-11134207-7r98o-lnp0z5b0dxl34d" alt="Gel Fixador Above Men - Fixação 2 Média 300g kit">
+            <p>Gel Fixador Above Men - Fixação 2 Média 300g kit</p>
+            <p><strong style="color: red;">R$ 14,99</strong></p>
+        </a>
+        <button onclick="addToCart('Gel Fixador Above Men - Fixação 2 Média 300g kit', 14.99)">Adicionar ao Carrinho</button>
+    </div>
+    
+            <div class="product">
+                <a href="produto-esmalte-risque.html">
+                    <img src="https://m.media-amazon.com/images/I/61P4PG+UJfL._AC_UF1000,1000_QL80_.jpg" alt="Esmalte Cremoso Risqué 8ml">
+                    <p>Esmalte Cremoso Risqué 8ml</p>
+                    <p>R$ 7,99</p>
+                </a>
+                <button onclick="addToCart('Esmalte Cremoso Risqué 8ml', 7.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="removedor-lutex-100ml.html">
+                    <img src="https://www.perfumariasumire.com.br/media/catalog/product/l/u/lutex.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=563&width=553&canvas=553:563" alt="Removedor De Esmalte Lutex Ap Eco 100Ml">
+                    <p>Removedor De Esmalte Lutex Ap Eco 100Ml</p>
+                    <p><strong style="color: red;">R$ 9,99</strong></p>
+                </a>
+                <button onclick="addToCart('Removedor De Esmalte Lutex Ap Eco 100Ml', 9.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="removedor-acetona-farmax-80ml.html">
+                    <img src="https://farmaxoficial1.vtexassets.com/arquivos/ids/155489-800-auto?v=637988891346200000&width=800&height=auto&aspect=true" alt="Removedor Esmalte Com Acetona Farmax 80ML">
+                    <p>Removedor Esmalte Com Acetona Farmax 80ML</p>
+                    <p><strong style="color: red;">R$ 4,99</strong></p>
+                </a>
+                <button onclick="addToCart('Removedor Esmalte Com Acetona Farmax 80ML', 4.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+    
+            <div class="product">
+                <a href="produto-maxlove-pocompacto.html">
+                    <img src="https://res.cloudinary.com/beleza-na-web/image/upload/w_1500,f_auto,fl_progressive,q_auto:eco,w_1800,c_limit/e_trim/v1/imagens/product/217/fb43f2fa-479e-416b-b3a5-dd332842901d-pocompactoc10.jpg" alt="Max Love Pó Compacto 11g">
+                    <p>Max Love Pó Compacto 11g</p>
+                    <p>R$ 11,50</p>
+                </a>
+                <button onclick="addToCart('Max Love Pó Compacto 11g', 11.50)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="mascara-cilios-colossal-yalanni.html">
+                    <img src="https://cdn.awsli.com.br/600x1000/2476/2476835/produto/233119400/masc_cilios_coloss_yalanni-xtdc02l29n.png" alt="Máscara para Cílios Colossal Volum' Express Yalanni 7ml">
+                    <p>Máscara para Cílios Colossal Volum' Express Yalanni 7ml</p>
+                    <p>R$ 15,99</p>
+                </a>
+                <button onclick="addToCart('Máscara para Cílios Colossal Volum\' Express Yalanni 7ml', 15.99)">Adicionar ao Carrinho</button>
+            </div>
+            
+            <div class="product">
+                <a href="produto-paleta-sombras-rubyrose.html">
+                    <img src="https://cdn.dooca.store/148383/products/8b1d88ezhwimnswxucwcmwqmc5x5quxh3lnv_640x640+fill_ffffff.png?v=1726671497&webp=0" alt="Paleta de Sombras Summer Muse - Ruby Rose">
+                    <p>Paleta de Sombras Summer Muse - Ruby Rose</p>
+                    <p>R$ 34,99</p>
+                </a>
+                <button onclick="addToCart('Paleta de Sombras Summer Muse - Ruby Rose', 34.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-paleta-sombras-peach-punch.html">
+                    <img src="https://static.cdnlive.com.br/uploads/724/unidade/17256519583651_zoom.jpg" alt="Paleta De Sombras Peach Punch Hb1093 Rubyrose">
+                    <p>Paleta De Sombras Peach Punch - Ruby Rose</p>
+                    <p>R$ 22,90</p>
+                </a>
+                <button onclick="addToCart('Paleta De Sombras Peach Punch - Ruby Rose', 22.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="produto-paleta-sombras-heated.html">
+                    <img src="https://cdn.sistemawbuy.com.br/arquivos/cad5cc7133685cdd8d0d7880d11cba96/produtos/6691102c18004/heated-nkb6mq2o9c-669110852a23f.jpg" alt="Paleta de Sombras Heated - Ruby Rose">
+                    <p>Paleta de Sombras Heated - Ruby Rose</p>
+                    <p>R$ 13,90</p>
+                </a>
+                <button onclick="addToCart('Paleta de Sombras Heated - Ruby Rose', 13.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="tinta-cabelo-cor-ton.html">
+                    <img src="https://product-data.raiadrogasil.io/images/3555241.webp" alt="Tinta de Cabelo Permanente Cor&ton">
+                    <p>Tinta de Cabelo Permanente Cor&ton</p>
+                    <p>R$ 17,99</p>
+                </a>
+                <button onclick="addToCart('Tinta de Cabelo Permanente Cor&ton', 17.99)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="tintura-loreal-paris-imedia-excellence.html">
+                    <img src="https://cdn.entrypoint.directory/assets/39669/produtos/4043/tintura-imedia-01.jpg" alt="Tintura L'Oreal Paris Imédia Excellence">
+                    <p>Tintura L'Oreal Paris Imédia Excellence</p>
+                    <p>R$ 32,90</p>
+                </a>
+                <button onclick="addToCart('Tintura L'Oreal Paris Imédia Excellence', 32.90)">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product">
+                <a href="tintura-wella-koleston.html">
+                    <img src="https://wella.vteximg.com.br/arquivos/ids/160946-1000-1000/7891182016230.1.jpg?v=638112898730930000" alt="Tintura Wella Koleston">
+                    <p>Tintura Wella Koleston</p>
+                    <p>R$ 26,50</p>
+                </a>
+                <button onclick="addToCart('Tintura Wella Koleston', 26.50)">Adicionar ao Carrinho</button>
+            </div>
+        </div>
+            
+            
+        </section>
+        
+        
+    </section>
+
+    <section id="carrinho">
+        <h2>🛒 Meu Carrinho</h2>
+        <div id="carrinho-itens"></div>
+        <p id="carrinho-total"><strong>Total: R$ 0,00</strong></p>
+        <button id="limpar-carrinho">🗑️ Limpar Carrinho</button>
+        <button id="enviar-whatsapp">📩 Enviar para WhatsApp</button>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    
+    <footer>
+        <p>&copy; 2024 Drogaria Gonçalves - Todos os direitos reservados</p>
+        <p>Siga-nos nas redes sociais!</p>
+    </footer>
+</body>
+</html>
